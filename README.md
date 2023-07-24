@@ -4,7 +4,7 @@
 ### CliniPhysio 
 ### **Contextualizando o Projeto** 
 
-Olá, meu nome é Natalia e sou formada em Fisioterapia. Durante os dois anos em que trabalhei como fisioterapeuta, notei que a grande maioria das clínicas ainda utiliza papel como meio principal para registrar informações, o que resulta em um enorme volume de papel acumulado ao longo dos anos. De acordo com a lei, essas informações precisam ser armazenadas por até 5 anos. No entanto, essa abordagem não apenas gera desperdício, mas também é prejudicial ao meio ambiente, já que não contribui para a sustentabilidade.
+Olá, meu nome é Natalia e sou formada em Fisioterapia. Durante os dois anos em que trabalhei como fisioterapeuta, notei que a grande maioria das clínicas ainda utiliza papel como meio principal para registrar informações, o que resulta em um enorme volume de papel acumulado ao longo dos anos. De acordo com a Lei Geral de Proteção de Dados(LGPD), essas informações precisam ser armazenadas por até 5 anos. No entanto, essa abordagem não apenas gera desperdício, mas também é prejudicial ao meio ambiente, já que não contribui para a sustentabilidade.
 
 Seria extremamente benéfico para todos adotarmos métodos mais sustentáveis de registro e armazenamento de informações clínicas. A transição para sistemas eletrônicos ou digitais permitiria reduzir significativamente a quantidade de papel utilizado, tornando o processo mais eficiente e ecologicamente correto.
 
@@ -208,6 +208,11 @@ versão
 ________________________________________________________________________________
 
 📝[Swagger](http://localhost:1515/minha-rota-de-documentacao/)
+
+### 📚 **Hospedagem da API**
+________________________________________________________________________________
+
+📝[render](https://cliniphysioapi.onrender.com)
 
 
 ### ✨ **Instalação e Contribuição no projeto** 
