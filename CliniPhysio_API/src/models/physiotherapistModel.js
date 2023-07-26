@@ -43,4 +43,4 @@ const physiotherapistSchema = mongoose.Schema(
 )
 
 const Model = mongoose.model("Physiotherapist", physiotherapistSchema);
-module.exports = Model
+module.exports = Model;

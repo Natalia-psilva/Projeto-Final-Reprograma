@@ -81,7 +81,7 @@ describe("POST model test", () => {
 
         })
         patient.save().then((dados) => {
-            expect(dados.name).toBe("Aroldo da Silva Santos")
+            expect(dados.name).toBe("Aroldo da Silva Santos");
         });
 
     })
@@ -110,7 +110,7 @@ describe("UPDATE model test", () => {
         });
         patient.name = "Aroldo da Silva Santos"
         patient.save().then((dados) => {
-            expect(dados.name).toBe("Aroldo da Silva Santos")
+            expect(dados.name).toBe("Aroldo da Silva Santos");
         })
     });
 })
@@ -137,6 +137,6 @@ describe("DELETE model test", () => {
             patient.delete().then((novosDados) => {
                 expect(dados.name).toBe(null);
             })
-        });
+        })
     })
 })

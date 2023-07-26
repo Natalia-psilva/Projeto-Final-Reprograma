@@ -4,26 +4,26 @@ const findAllPhysios = async (req, res) => {
     try {
         const allPhysios = await
             physioModel.find()
-        res.status(200).json(allPhysios)
+        res.status(200).json(allPhysios);
     } catch (error) {
-        res.status(500).json({ message: error.message })
+        res.status(500).json({ message: error.message });
     }
 }
 
 const findPhysioByName = async (req, res) => {
     try {
         const { name } = req.query
-        const findName = await physioModel.find({ name: name})
+        const findName = await physioModel.find({ name: name});
         if(!findName) {
             return res.status(404).json({
                 message: "Physiotherapist not found, please chek the name and try again!"
             })
         }
-        res.status(200).json(findName)
+        res.status(200).json(findName);
     } catch (error) {
         res.status(500).json({
             message: error.message
-        })
+        });
     }
 }
 
@@ -48,9 +48,9 @@ const addNewPhysio = async (req, res) => {
             patients,
         });
         const saveNewPhysio = await newPhysio.save();
-        res.status(201).json({ message: "New Physiotherapist successfully added", saveNewPhysio })
+        res.status(201).json({ message: "New Physiotherapist successfully added", saveNewPhysio });
     } catch (error) {
-        res.status(500).json({ message: error.message })
+        res.status(500).json({ message: error.message });
     }
 }
 
@@ -84,10 +84,10 @@ const deletePhysioById = async (req, res) => {
         const { id } = req.params
         deletePhysio = await physioModel.findByIdAndDelete(id)
         let message = `The Physiotherapist ${id} was deleted`
-        res.status(200).json({ message })
+        res.status(200).json({ message });
     } catch (error) {
         console.error(error)
-        res.status(500).json({ message: error.message })
+        res.status(500).json({ message: error.message });
     }
 }
 module.exports = {

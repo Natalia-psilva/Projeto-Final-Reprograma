@@ -5,9 +5,9 @@ const findAllPatients = async (req, res) => {
     try {
         const allPatients = await
             patientsModel.find().populate("physiotherapist");
-        res.status(200).json(allPatients)
+        res.status(200).json(allPatients);
     } catch (error) {
-        res.status(500).json({ message: error.message })
+        res.status(500).json({ message: error.message });
     }
 }
 
@@ -18,13 +18,13 @@ const findPatientByName = async (req, res) => {
         if(!findName) {
             return res.status(404).json({
                 message: "Patient not Found, please chek the name and try again!"
-            })
+            });
         }
         res.status(200).json(findName)
     } catch (error) {
         res.status(500).json({
             message: error.message
-        })
+        });
     }
 }
 const addNewPatient = async (req, res) => {
@@ -43,13 +43,13 @@ const addNewPatient = async (req, res) => {
             physiotherapyDiagnosis,
             physiotherapist } = req.body
         if (!physiotherapistId) {
-            return res.status(400).json({ message: "Required: Enter the Physiotherapist id" })
+            return res.status(400).json({ message: "Required: Enter the Physiotherapist id" });
         }
         const findPhysio = await physioModel.findById(physiotherapistId)
         if (!findPhysio) {
             return res.status(404).json({
                 message: "Physiotherapist Not Found"
-            })
+            });
         }
         const newPatient = new patientsModel({
             physiotherapist:
@@ -73,7 +73,7 @@ const addNewPatient = async (req, res) => {
         console.error(error)
         res.status(500).json({
             message: error.message
-        })
+        });
     }
 }
 
@@ -96,14 +96,14 @@ const updatePatientesById = async (req, res) => {
             if (findPatient == null) {
                 res.status(404).json({
                     message: "Patient not found"
-                })
+                });
             }
             if (physiotherapistId) {
                 const findPhysio = await physioModel.findById(physiotherapistId)
                 if (findPhysio == null) {
                     return res.status(404).json({
                         message: "Physioterapist not found"
-                    })
+                    });
                 }
             }
             findPatient.name = name || findPatient.name;
@@ -129,10 +129,10 @@ const updatePatientesById = async (req, res) => {
             const { id } = req.params
             deletePatient = await patientsModel.findByIdAndDelete(id)
             let message = `The Patient ${id} was deleted`
-            res.status(200).json({ message })
+            res.status(200).json({ message });
         } catch (error) {
             console.error(error)
-            res.status(500).json({ message: error.message })
+            res.status(500).json({ message: error.message });
         }
     }
 module.exports = {

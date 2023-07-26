@@ -55,8 +55,8 @@ describe("POST model test", () => {
             "patients": [],
         })
         physiotherapist.save().then((dados) => {
-            expect(dados.name).toBe("Natalia de Paiva")
-        });
+            expect(dados.name).toBe("Natalia de Paiva");
+        })
     })
 })
 
@@ -73,7 +73,7 @@ describe("UPDATE model test", () => {
         });
         physiotherapist.name = "Natalia de Paiva"
         physiotherapist.save().then((dados) => {
-            expect(dados.name).toBe("Natalia de Paiva")
+            expect(dados.name).toBe("Natalia de Paiva");
         })
     });
 })
@@ -94,6 +94,6 @@ describe("DELETE model test", () => {
         physiotherapist.delete().then((novosDados) => {
                 expect(dados.name).toBe(null);
             })
-        });
+        })
     })
 })

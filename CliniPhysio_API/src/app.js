@@ -16,10 +16,10 @@ const physiotherapistRoutes = require("./routes/physiotherapistRoutes");
 app.use("/physios", physiotherapistRoutes);
 
 
-const swaggerUi = require("swagger-ui-express")
-const swaggerFile = require("../swagger/swagger_output.json")
-app.use("/minha-rota-de-documentacao", swaggerUi.serve, swaggerUi.setup(swaggerFile))
+const swaggerUi = require("swagger-ui-express");
+const swaggerFile = require("../swagger/swagger_output.json");
+app.use("/minha-rota-de-documentacao", swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
 
-module.exports = app
+module.exports = app;
 
