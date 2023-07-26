@@ -14,13 +14,13 @@ const findAllPatients = async (req, res) => {
 const findPatientByName = async (req, res) => {
     try {
         const { name } = req.query
-        const findName = await patientsModel.find({ name: name})
+        const findName = await patientsModel.find({ name: name});
         if(!findName) {
             return res.status(404).json({
                 message: "Patient not Found, please chek the name and try again!"
             });
         }
-        res.status(200).json(findName)
+        res.status(200).json(findName);
     } catch (error) {
         res.status(500).json({
             message: error.message
@@ -45,7 +45,7 @@ const addNewPatient = async (req, res) => {
         if (!physiotherapistId) {
             return res.status(400).json({ message: "Required: Enter the Physiotherapist id" });
         }
-        const findPhysio = await physioModel.findById(physiotherapistId)
+        const findPhysio = await physioModel.findById(physiotherapistId);
         if (!findPhysio) {
             return res.status(404).json({
                 message: "Physiotherapist Not Found"
