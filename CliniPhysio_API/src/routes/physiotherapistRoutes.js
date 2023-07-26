@@ -1,6 +1,6 @@
 const physiosControllers = require("../controllers/physiotherapistControllers");
-const express = require("express");
-const router = express.Router();
+const express = require("express")
+const router = express.Router()
 
 router.get("/all", physiosControllers.findAllPhysios);
 router.get("/name", physiosControllers.findPhysioByName);
