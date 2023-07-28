@@ -207,12 +207,12 @@ versão
 ### 📚 **Documentação da API**
 ________________________________________________________________________________
 
-📝[Swagger](http://localhost:1515/minha-rota-de-documentacao/)
+📝[Swagger](http://localhost:3000/minha-rota-de-documentacao/)
 
 ### 📚 **Hospedagem da API**
 ________________________________________________________________________________
 
-📝[render](https://cliniphysioapi.onrender.com)
+📝[render](https://cliniphysio-api.onrender.com/)
 
 
 ### ✨ **Instalação e Contribuição no projeto** 
